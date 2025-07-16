@@ -31,7 +31,7 @@ DeviceFileEvents
 | order by Timestamp desc
 | project Timestamp, DeviceName, InitiatingProcessAccountName, ActionType, FileName, FolderPath, SHA256
 
-##📌 Findings
+## 📌 Findings
 User: cyberuser
 
 Files:
@@ -46,10 +46,10 @@ Timestamps: 19:05:52 — 19:07:01 UTC, 14 July 2025
 
 ➡️ Conclusion: nmap — a network scanning tool — was installed or extracted without authorization.
 
-##✅ Evidence: File creation timeline and user context
+## ✅ Evidence: File creation timeline and user context
 🕵️ Next: Confirm execution and usage.
 
-##✅ STEP 2 — Execution Evidence
+## ✅ STEP 2 — Execution Evidence
 kql
 Copy
 Edit
@@ -72,9 +72,9 @@ Path: C:\Users\cyberuser\Downloads
 
 Timestamp: 14 July 2025 — 19:05:45 UTC
 
-✅ Conclusion: User downloaded and ran the installer, then executed nmap.exe.
+## ✅ Conclusion: User downloaded and ran the installer, then executed nmap.exe.
 
-✅ STEP 3 — Command Line Analysis
+## ✅ STEP 3 — Command Line Analysis
 kql
 Copy
 Edit
@@ -102,7 +102,7 @@ Flags:
 
 ✅ Conclusion: Advanced scan with host OS/version detection. Output saved locally.
 
-✅ STEP 4 — Network Activity Check
+## ✅ STEP 4 — Network Activity Check
 kql
 Copy
 Edit
@@ -121,9 +121,9 @@ Firewall blocked traffic.
 
 Telemetry gap.
 
-✅ Next: Broadened query — no results.
+## ✅ Next: Broadened query — no results.
 
-✅ STEP 5 — Employee & Management Response
+## ✅ STEP 5 — Employee & Management Response
 👥 Meeting with Employee
 Discuss: Reason for installing & using nmap.
 
@@ -142,7 +142,7 @@ Update: Policies if needed.
 
 Share: Anonymized lessons learned with wider team.
 
-✅ Recommended Actions
+## ✅ Recommended Actions
 Action	Owner	Priority
 Conduct employee meeting	IT Security & HR	High
 Document findings	IT Security	High
@@ -150,7 +150,7 @@ Escalate to management	Security Manager	High
 Improve controls	IT & Security	Medium
 Share lessons learned	Security Awareness Team	Medium
 
-✅ Status
+## ✅ Status
 📌 Investigation Complete — Follow-Up Actions In Progress
 
 🔐 End of Report
