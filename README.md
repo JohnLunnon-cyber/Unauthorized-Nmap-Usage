@@ -22,7 +22,7 @@
 **Environment:** Onboarded VM — `john-target1-vm`  
 **Tools:** Microsoft Defender for Endpoint (MDE) and KQL
 
- 🔍 Initial Query
+## 🔍 Initial Query
 
 ```kql
 DeviceFileEvents
@@ -46,7 +46,7 @@ Timestamps: 19:05:52 — 19:07:01 UTC, 14 July 2025
 
 ➡️ Conclusion: nmap — a network scanning tool — was installed or extracted without authorization.
 
- ✅ Evidence: File creation timeline and user context
+## ✅ Evidence: File creation timeline and user context
 🕵️ Next: Confirm execution and usage.
 
 ##  ✅ STEP 2 — Execution Evidence
