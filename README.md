@@ -49,7 +49,7 @@ Timestamps: 19:05:52 — 19:07:01 UTC, 14 July 2025
  ✅ Evidence: File creation timeline and user context
 🕵️ Next: Confirm execution and usage.
 
-## ✅ STEP 2 — Execution Evidence
+##  ✅ STEP 2 — Execution Evidence
 kql
 Copy
 Edit
@@ -123,7 +123,7 @@ Telemetry gap.
 
 ✅ Next: Broadened query — no results.
 
-## ✅ STEP 5 — Employee & Management Response
+### ✅ STEP 5 — Employee & Management Response
 👥 Meeting with Employee
 Discuss: Reason for installing & using nmap.
 
