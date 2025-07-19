@@ -152,16 +152,12 @@ This step ensures accountability, documentation, and organizational learning fro
 
 👥 Meeting with Employee
 Discuss: Reason for installing & using nmap.
-
 Reinforce: Acceptable Use Policy (AUP) and security rules.
-
 Assess: Need for training/awareness.
-
 Document: Employee statement & acknowledgement.
 
 🏢 Escalate to Management
 Review: Any needed HR/disciplinary action.
-
 Evaluate: Extra controls (application allow-listing, endpoint restrictions).
 
 Update: Policies if needed.
