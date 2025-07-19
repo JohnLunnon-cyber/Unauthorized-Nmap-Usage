@@ -22,6 +22,9 @@
 **Environment:** Onboarded VM — `john-target1-vm`  
 **Tools:** Microsoft Defender for Endpoint (MDE) and KQL
 
+## The first step in a threat investigation is detecting potentially malicious or unauthorized activity. In this case, we begin by identifying whether a known offensive security tool — nmap — was introduced into the environment. Nmap is commonly used for network scanning and reconnaissance, which can be a red flag if it's not part of the standard toolset for the user or organization.
+Using Microsoft Defender for Endpoint and KQL, we query for file creation and download events related to Nmap, which helps us pinpoint when, where, and by whom the tool was introduced.
+
 ## 🔍 Initial Query
 
 ## kql
