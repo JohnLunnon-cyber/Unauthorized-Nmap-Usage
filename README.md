@@ -27,7 +27,16 @@ Using Microsoft Defender for Endpoint and KQL, we query for file creation and do
 
 ## 🔍 Initial Query
 
-## kql
+## 🔍 STEP 1 — Initial Detection
+
+### 🧠 Explanation  
+The first step in a threat investigation is detecting potentially malicious or unauthorized activity. In this case, we begin by identifying whether a known offensive security tool — `nmap` — was introduced into the environment. Nmap is commonly used for network scanning and reconnaissance, which can be a red flag if it's not part of the standard toolset for the user or organization.  
+Using Microsoft Defender for Endpoint and KQL, we query for file creation and download events related to Nmap, which helps us pinpoint **when**, **where**, and **by whom** the tool was introduced.
+
+---
+
+### 🧪 KQL Query — Initial Detection of Nmap
+```kql
 DeviceFileEvents
 | where FileName has "nmap"
 | where ActionType in ("FileCreated", "FileDownloaded")
@@ -49,13 +58,15 @@ Timestamps: 19:05:52 — 19:07:01 UTC, 14 July 2025
 
 ➡️ Conclusion: nmap — a network scanning tool — was installed or extracted without authorization.
 
-## ✅ Evidence: File creation timeline and user context
+# ✅ Evidence: File creation timeline and user context
 🕵️ Next: Confirm execution and usage.
 
-###  ✅ STEP 2 — Execution Evidence
+```
+
+##  ✅ STEP 2 — Execution Evidence
 After detecting the presence of Nmap files, the next step is to confirm whether the tool was executed. Detecting execution is crucial because a tool that simply exists on disk poses less risk than one that was actively used.
 We query process execution logs to determine if nmap.exe or its GUI (zenmap) were launched. This helps attribute the activity to a specific user account, confirm installation, and verify that the tool moved from dormant to active — an escalation in severity.
-
+```
 kql
 Copy
 Edit
@@ -65,7 +76,7 @@ DeviceProcessEvents
 | project Timestamp, DeviceName, AccountName, FileName, FolderPath, ProcessCommandLine
 📌 Findings
 Executable: nmap.exe
-
+```
 Path: C:\Program Files (x86)\N...
 
 User: cyberuser
@@ -85,8 +96,7 @@ Knowing that a suspicious tool was executed, we now examine how it was used by a
 Command-line flags provide insight into the user’s intent — whether they were performing basic discovery or more advanced enumeration like OS detection, version scanning, or output logging. This helps us assess the level of technical capability, the purpose behind the scan, and the extent of potential impact.
 
 kql
-Copy
-Edit
+```
 DeviceProcessEvents
 | where FileName == "nmap.exe"
 | where ProcessCommandLine has_any ("-sS", "-A", "-p")
@@ -108,7 +118,7 @@ Flags:
 -v: Verbose
 
 -oX: Output as XML
-
+```
 ✅ Conclusion: Advanced scan with host OS/version detection. Output saved locally.
 
 ## ✅ STEP 4 — Network Activity Check
@@ -116,13 +126,13 @@ To determine the effect of the Nmap execution, we check for outbound network act
 This step helps validate whether the tool was simply tested, ran ineffectively, or used in an actual reconnaissance attempt. A lack of data can still be valuable — it may indicate local scanning only, firewall blocking, or limitations in logging coverage.
 
 kql
-Copy
-Edit
+```
 DeviceNetworkEvents
 | where InitiatingProcessFileName == "nmap.exe"
 | order by Timestamp desc
 | project Timestamp, DeviceName, InitiatingProcessAccountName, InitiatingProcessFileName, RemoteIP, RemotePort, LocalPort, InitiatingProcessCommandLine
 📌 Result
+```
 No logs returned
 
 Possible reasons:
