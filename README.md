@@ -128,6 +128,8 @@ Flags:
 
 -oX: Output as XML
 ```
+![Image Alt](https://github.com/JohnLunnon-cyber/Unauthorized-Nmap-Usage/blob/d75f60a3a3537ccaa6089d1c1fc4f0b615dbf14d/Screenshot%202025-07-20%20at%2010.53.05.png)
+
 ✅ Conclusion: Advanced scan with host OS/version detection. Output saved locally.
 
 ## ✅ STEP 4 — Network Activity Check
