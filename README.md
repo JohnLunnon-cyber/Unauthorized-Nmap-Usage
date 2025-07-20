@@ -150,6 +150,8 @@ Local-only scan.
 Firewall blocked traffic.
 Telemetry gap.
 
+![Image Alt](https://github.com/JohnLunnon-cyber/Unauthorized-Nmap-Usage/blob/b47b2b2b7514bf80a836c42314d5fc97d3827e8f/Screenshot%202025-07-20%20at%2010.56.37.png)
+
 
 ✅ Next: Broadened query — no results.
 
