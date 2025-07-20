@@ -72,8 +72,7 @@ After detecting the presence of Nmap files, the next step is to confirm whether 
 We query process execution logs to determine if nmap.exe or its GUI (zenmap) were launched. This helps attribute the activity to a specific user account, confirm installation, and verify that the tool moved from dormant to active — an escalation in severity.
 ```
 kql
-Copy
-Edit
+
 DeviceProcessEvents
 | where FileName has "nmap" or FileName has "zenmap"
 | order by Timestamp desc
@@ -94,6 +93,9 @@ Path: C:\Users\cyberuser\Downloads
 Timestamp: 14 July 2025 — 19:05:45 UTC
 
 ✅ Conclusion: User downloaded and ran the installer, then executed nmap.exe.
+```
+<img width="995" height="586" alt="Screenshot 2025-07-20 at 09 34 43" src="https://github.com/user-attachments/assets/a30f422a-44fd-4e1c-b894-c5bcec8255e0" />
+```
 
 ## ✅ STEP 3 — Command Line Analysis
 Knowing that a suspicious tool was executed, we now examine how it was used by analyzing the command-line arguments passed during execution.
