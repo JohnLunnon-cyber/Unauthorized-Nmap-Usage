@@ -145,14 +145,11 @@ DeviceNetworkEvents
 📌 Result
 ```
 No logs returned
-
 Possible reasons:
-
 Local-only scan.
-
 Firewall blocked traffic.
-
 Telemetry gap.
+
 
 ✅ Next: Broadened query — no results.
 
