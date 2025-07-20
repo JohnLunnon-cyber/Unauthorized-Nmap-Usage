@@ -43,7 +43,7 @@ DeviceFileEvents
 | order by Timestamp desc
 | project Timestamp, DeviceName, InitiatingProcessAccountName, ActionType, FileName, FolderPath, SHA256
 
-<img width="960" height="654" alt="Screenshot 2025-07-20 at 09 31 34" src="https://github.com/user-attachments/assets/4ad3aa75-d288-475b-bd42-490e067ed730" />
+
 
  📌 Findings
 User: cyberuser
@@ -63,6 +63,8 @@ Timestamps: 19:05:52 — 19:07:01 UTC, 14 July 2025
 # ✅ Evidence: File creation timeline and user context
 🕵️ Next: Confirm execution and usage.
 
+```
+<img width="960" height="654" alt="Screenshot 2025-07-20 at 09 31 34" src="https://github.com/user-attachments/assets/4ad3aa75-d288-475b-bd42-490e067ed730" />
 ```
 
 ##  ✅ STEP 2 — Execution Evidence
