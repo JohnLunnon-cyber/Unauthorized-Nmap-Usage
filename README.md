@@ -43,6 +43,8 @@ DeviceFileEvents
 | order by Timestamp desc
 | project Timestamp, DeviceName, InitiatingProcessAccountName, ActionType, FileName, FolderPath, SHA256
 
+<img width="960" height="654" alt="Screenshot 2025-07-20 at 09 31 34" src="https://github.com/user-attachments/assets/4ad3aa75-d288-475b-bd42-490e067ed730" />
+
  📌 Findings
 User: cyberuser
 
