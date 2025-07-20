@@ -94,7 +94,8 @@ Timestamp: 14 July 2025 — 19:05:45 UTC
 
 ✅ Conclusion: User downloaded and ran the installer, then executed nmap.exe.
 ```
-![Nmap Evidence](https://github.com/JohnLunnon-cyber/Unauthorized-Nmap-Usage/blob/main/nmap-evidence.png?raw=true)
+![Nmap Evidence](<img width="1990" height="1172" alt="image" src="https://github.com/user-attachments/assets/860468b7-5e69-4925-92c1-05dff7bebdaa" />
+)
 
 
 
