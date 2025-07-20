@@ -113,7 +113,7 @@ DeviceProcessEvents
 | project Timestamp, DeviceName, AccountName, ProcessCommandLine
 📌 Findings
 Example Command:
-
+```
 bash
 Copy
 Edit
